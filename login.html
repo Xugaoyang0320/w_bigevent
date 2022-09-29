@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录页面</title>
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+<!-- 
+  tips:
+  1、在文件夹中单击右键没有使用VS工具打开的选项，吧VS重新装一下，安装期间勾选复选框
+  2、用VS打开项目的时候，不要打开太多文件夹
+  3、Live Serve 小型服务器没打开的时候会默认占用5500端口
+  https://127.0.0.1 ip地址很特殊，表示是自己本地
+  https://localhost 域名的形式，表示是自己本地
+  192.168.37.201 本机地址，也比碍事自己本地（查看本地IP地址的方式：ipconfig/all-[首选]）
+  http://0.0.0.0/ 表示本地回环地址，也表示是自己本地
+  如果想访问你同桌的网页效果，你可以吧他的IP和端口拿过来（前提是你们两个要在同一个号段）（局域网）
+  wraaper:包裹
+ -->
+
+<body>
+  <div class="layui-main">
+    <img src="/assets/images/logo.png" alt="">
+  </div>
+  <div class="login-reg-box">
+    <!-- 登录、注册的标题区域 -->
+    <h4>
+      <img src="/assets/images/login_title.png" alt="">
+    </h4>
+    <!-- 登录、注册的表单区域 -->
+    <!-- 登录的表单 -->
+    <div class="login-wrap" >
+      <form class="layui-form" id="formLogin">
+        <!-- 用户名 -->
+        <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>
+            <!-- 需要就是要 lay-verify 进行添加校验规则，如果有多个校验规则的话，可以通过竖线 | 进行分隔，-->
+            <!-- 原生 input 输入框本身就有 required 属性，就表示输入框是一个必填项 -->
+            <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+        </div>
+        <!-- 密码 -->
+        <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>
+            <input type="password" name="password" required  lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+        <!-- 登录按钮 -->
+        <div class="layui-form-item">
+          <!-- 注意：表单提交按钮和普通按钮的区别就是 lay-submit -->
+          <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit >登录</button>
+        </div>
+        <!--  -->
+        <div class="layui-form-item links">
+          <a href="javascript:;"id="go2Reg">去注册</a>
+        </div>
+      </form>
+    </div>
+    <!-- 注册的表单 -->
+    <div class="reg-wrap" >
+      <form class="layui-form" id="formReg">
+        <!-- 用户名 -->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-username"></i>
+            <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+        </div>
+        <!-- 密码 -->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-password"></i>
+            <input id="password" type="password" name="password" required  lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+        <!-- 密码确认框 -->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-password"></i>
+            <input type="password" name="repassword" required  lay-verify="required|pwd|repwd" placeholder="请再次确认密码" autocomplete="off" class="layui-input">
+        </div>
+        <!-- 注册按钮 -->
+        <div class="layui-form-item">
+          <!-- 注意：表单提交按钮和普通按钮的区别就是 lay-submit -->
+          <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit >注册</button>
+        </div>
+        <!--  -->
+        <div class="layui-form-item links">
+          <a href="javascript:;" id="go2Login">去登录</a>
+        </div>
+      </form> 
+    </div>
+    <!-- 导入layui.js 文件 -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 导入jquery -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入自己封装的js文件 -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="/assets/js/login.js"></script>
+  </div>
+
+</body>
+
+</html>
