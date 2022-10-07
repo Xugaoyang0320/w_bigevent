@@ -1,13 +1,67 @@
-.layui-footer{
+.layui-footer {
   text-align: center;
   font-size: 13px;
   background-color: #23262e !important;
-  color:#fff;
+  color: #fff;
 }
-.iconfont{
+
+.iconfont {
   margin-right: 8px;
 }
-.layui-icon{
+
+.layui-icon {
   margin-right: 8px;
   margin-left: 10px;
+}
+
+.layui-body div {
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.layui-body {
+  overflow: hidden;
+}
+
+/* css层级选择器：深度选择器/deep/>>>:deep(类名）>!important>行内选择器>id选择器>标签选择器>属性选择器>通配符选择器 */
+a {
+  transition: none !important;
+}
+
+.user-box {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-box .layui-nav-img {
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+.user-box .text-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #cdcdcd;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-right: 10px;
+  user-select: none;
+  display: none;
+}
+
+.user-box .text {
+  font-size: 12px;
+  user-select: none;
 }
