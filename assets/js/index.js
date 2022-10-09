@@ -16,7 +16,7 @@ function getUserInfo() {
     //   Authorization: localStorage.getItem('big_news_token') || ''
     // },
     success(res) {
-      console.log(res)
+      // console.log(res)
       if (res.code !== 0) return layer.msg(res.message)
       // 按需渲染头像
       renderAvatar(res)
