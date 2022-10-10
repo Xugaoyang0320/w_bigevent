@@ -88,7 +88,7 @@ $(function () {
       jump(obj, first) {
         // console.log(obj,first);
         // 最新的第几页和最新的每页显示几条数据
-        console.log(obj.curr, obj.limit);
+        // console.log(obj.curr, obj.limit);
         qs.pagenum = obj.curr
         qs.pagesize = obj.limit
 
